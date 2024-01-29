@@ -14,8 +14,7 @@
 
 ## Questions
 
-> That endpoint will be called about a million times a minute and some requests
-> will be for the same subscriber, how would you scale it?**
+### That endpoint will be called about a million times a minute and some requests will be for the same subscriber, how would you scale it?**
 
 - Get subscriber
     - We can use cache to store the subscriber data and use it to avoid querying
@@ -29,8 +28,7 @@
       can return the error response, if the count is 0 we can store the
       subscriber in the database and cache it.
 
-> How would you scale the above endpoints to handle 10 times the traffic? What
-> challenges do you foresee?
+### How would you scale the above endpoints to handle 10 times the traffic? What challenges do you foresee?
 
 There are multiple ways to scale the above endpoints, here are some general
 steps and strategies we can employ
@@ -72,4 +70,50 @@ steps and strategies we can employ
       per second per user. This helps to prevent the system from being
       overloaded. We can
       use a token bucket algorithm to implement rate limiting and throttling.
+
+### Challenges
+
+1. Load Balancing
+    - We need to make sure that the load balancer is not a single point of
+      failure. We can use multiple load balancers to avoid this problem.
+    - We need to make sure that the load balancer is not a bottleneck. We can
+      use a hardware load balancer to avoid this problem.
    
+2. Horizontal Scaling
+    - We need to make sure that the application is stateless and is
+      fault-tolerant. This helps to
+      easily scale the application horizontally.
+   
+3. Latency
+    - As the load increases, the response time of the API might also increase.
+      It's essential to monitor and optimize the latency of the API to ensure a
+      good user experience.
+   
+4. Consistency
+    - We need to make sure that the data is consistent across all the servers.
+      We can use a distributed cache to store the data.
+   
+5. Cost Management
+    - We need to make sure that the cost of scaling the application is
+      manageable.
+    - We can cost monitoring tools provided by cloud providers to stay informed
+      about resource consumption.
+   
+6. Security
+    - Increased traffic can make API more susceptible to various security
+      threats, such as DDoS attacks. We need to implement robust security
+      measures,
+      including rate limiting, firewalls, and thorough input validation.
+   
+7. Testing at Scale
+    - Testing the performance of the system at scale is crucial. We need to
+      conduct
+      realistic load testing to identify potential bottlenecks and weaknesses in
+      the architecture.
+   
+8. Documentation and Communication
+    - We need to make sure that the documentation is up-to-date As system
+      scales, it becomes essential to have up-to-date documentation and clear
+      communication channels within the team. This helps to avoid
+      confusion and improve productivity.
+
