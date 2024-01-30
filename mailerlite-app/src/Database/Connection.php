@@ -16,7 +16,7 @@ class Connection
 
     private string $db_name = 'mailerlite';
 
-    private ?PDO $connection = null;
+    private PDO $connection;
 
     public function __construct()
     {

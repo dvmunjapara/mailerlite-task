@@ -14,7 +14,7 @@ class Router {
      * @throws NotFoundHttpException
      * @throws MethodNotFoundException
      */
-    public function route($method, $uri): void
+    public function route(string $method, string $uri): void
     {
         $result = $this->resolver->resolve($method, $uri);
 

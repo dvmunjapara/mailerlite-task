@@ -20,7 +20,8 @@
     "require": {
         "predis/predis": "^2.2",
         "guzzlehttp/guzzle": "^7.8",
-        "fakerphp/faker": "^1.23"
+        "fakerphp/faker": "^1.23",
+        "ext-pdo": "*"
     },
     "config": {
         "allow-plugins": {

@@ -7,7 +7,7 @@ use App\Service\SubscriberService;
 
 class SubscriberController extends Controller
 {
-    private ?SubscriberService $service = null;
+    private SubscriberService $service;
 
     public function __construct()
     {
