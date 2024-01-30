@@ -66,10 +66,6 @@ test('subscribe request validation', function () {
     $this->assertSame('Please select correct status', $content['error']);
 });
 
-/**
- * @runInSeparateProcess
- * @preserveGlobalState disabled
- */
 test('subscriber should be unique', function () {
 
 
