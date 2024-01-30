@@ -8,8 +8,9 @@
 - Run `docker-compose up -d`
 - Run `chmod -x bootstrap.sh`
 - Run `sh bootstrap.sh`
-- Run `docker exec -i mailerlite-app-fpm ./vendor/bin/pest`
-- Run `docker exec -i mailerlite-app-fpm ./vendor/bin/pest --coverage`
+- Run `docker exec -i mailerlite-app-fpm ./vendor/bin/phpstan` for static analysis
+- Run `docker exec -i mailerlite-app-fpm ./vendor/bin/pest` for running tests
+- Run `docker exec -i mailerlite-app-fpm ./vendor/bin/pest --coverage` for generating coverage report
 - Open `http://localhost:5173` in your browser
 
 ## Questions
