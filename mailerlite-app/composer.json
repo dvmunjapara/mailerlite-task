@@ -18,7 +18,6 @@
         }
     },
     "require": {
-        "tightenco/collect": "^9.52",
         "predis/predis": "^2.2",
         "guzzlehttp/guzzle": "^7.8",
         "fakerphp/faker": "^1.23"
